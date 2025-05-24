@@ -1,18 +1,53 @@
-<?php
-
+<?php 
 session_start();
-
 include_once('config.php');
-if(empty($_SESSION['username'])){
-    header('Location:login.php');
+
+// Redirect if not logged in
+if (!isset($_SESSION['id']) || !isset($_SESSION['is_admin'])) {
+    header('Location: login.php');
+    exit;
 }
 
-$sql="SELECT * FROM users";
-$selectUsers=$conn->prepare($sql);
-$selectUsers->execute();
+$user_id = $_SESSION['id'];
+$is_admin = $_SESSION['is_admin'];
 
-$users_data=$selectUsers->fetchall();
+if ($is_admin == 'true') {
+    // Admin: view all orders
+    $sql = "SELECT 
+                qms.name AS product_name,
+                users.email,
+                orders.id,
+                orders.quantity,
+                orders.date,
+                orders.is_approved
+            FROM orders
+            INNER JOIN qms ON qms.id = orders.product_id
+            INNER JOIN users ON users.id = orders.user_id";
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $bookings_data = $stmt->fetchAll();
+} else {
+    // Regular user: view their own orders
+    $sql = "SELECT 
+                qms.name AS product_name,
+                users.email,
+                orders.id,
+                orders.quantity,
+                orders.date,
+                orders.is_approved
+            FROM orders
+            INNER JOIN qms ON qms.id = orders.product_id
+            INNER JOIN users ON users.id = orders.user_id
+            WHERE orders.user_id = :user_id";
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $bookings_data = $stmt->fetchAll();
+}
 ?>
+
 
 <!DOCTYPE html>
  <html>
@@ -32,7 +67,7 @@ $users_data=$selectUsers->fetchall();
   <meta name="theme-color" content="#7952b3">
  </head>
  <body>
- 
+
  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><?php echo "Welcome to dashboard ".$_SESSION['username']; ?></a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,8 +85,8 @@ $users_data=$selectUsers->fetchall();
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
-           
+      <ul class="nav flex-column">
+           <?php if ($_SESSION['is_admin'] == 'true') { ?>
             <li class="nav-item">
               <a class="nav-link" href="home.php">
                 <span data-feather="file"></span>
@@ -64,31 +99,37 @@ $users_data=$selectUsers->fetchall();
               Dashboard
             </a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="aboutus.php">
-              <span data-feather="home"></span>
-              About Us
-            </a>
-          </li>
-
           <li class="nav-item">
             <a class="nav-link" href="list_products.php">
               <span data-feather="file"></span>
-              Products
+              Movies
             </a>
           </li>
+          
           <li class="nav-item">
+            <a class="nav-link" href="order.php">
+              <span ></span>
+              Bookings
+            </a>
+          </li>
+          <?php }else{ ?>
+          <li class="nav-item">
+              <a class="nav-link" href="home.php">
+                <span data-feather="file"></span>
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="orders.php">
               <span ></span>
               Bookings
             </a>
           </li>
+          
         </ul>
-     
-    
 
 
+        <?php }?>
         
       </div>
     </nav>
@@ -97,47 +138,63 @@ $users_data=$selectUsers->fetchall();
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
-        
+       
       </div>
 
+      <h2>Movie Bookings</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+        
+              <th scope="col">Name</th>
+              <th scope="col">User Email</th>
+              <th scope="col">Number of Product</th>
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Approved</th>
 
 
-<h2>Users</h2>
-<div class="table-responsive">
-  <table class="table table-striped table-sm">
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Emri</th>
-        <th scope="col">Username</th>
-        <th scope="col">Email</th>
-        <th scope="col">Update</th>
-        <th scope="col">Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php foreach ($users_data as $user_data) { ?>
+            </tr>
+          </thead>
+          <tbody>
+          <?php if ($_SESSION['is_admin'] == 'true') { ?>
+            <?php foreach ($bookings_data as $booking_data) { ?>
+                
+               <tr>
+                <td><?php echo $booking_data['Name']; ?></td>
+                <td><?php echo $booking_data['email']; ?></td>
+                <td><?php echo $booking_data['nr_orders']; ?></td>
+                <td><?php echo $booking_data['date']; ?></td>
+                <td><?php echo $booking_data['time']; ?></td>
+                <td ><?php echo $booking_data['is_approved']; ?></td>
 
-        <tr>
-                <td><?php echo $user_data['id']; ?></td>
-                <td><?php echo $user_data['name']; ?></td>
-                <td><?php echo $user_data['username']; ?></td>
-                <td><?php echo $user_data['email']; ?></td>
-                <!-- If we want to update a user we need to link into editUsers.php -->
-                <td><a href="editUsers.php?id=<?= $user_data['id'];?>">Update</a></td>
-                  <!-- If we want to delete a user we need to link into deleteUsers.php -->
-                <td><a href="deleteUsers.php?id=<?= $user_data['id'];?>">Delete</a></td>
+                
+                <td><a href="approve.php?id=<?= $booking_data['id'];?>">Approve</a></td>
+                <td><a href="decline.php?id=<?= $booking_data['id'];?>">Decline</a></td>
               </tr>
               
-           <?php  } ?>
+           <?php }}else{ ?>
+            <?php foreach ($bookings_data as $booking_data) { ?>
+            <tr>
+            <td><?php echo $booking_data['Name']; ?></td>
+            <td><?php echo $booking_data['email']; ?></td>
+            <td><?php echo $booking_data['nr_orders']; ?></td>
+            <td><?php echo $booking_data['date']; ?></td>
+            <td><?php echo $booking_data['time']; ?></td>
+            <td ><?php echo $booking_data['is_approved']; ?></td>
+            
+           </tr>
+            
+           <?php } ?>
+          <?php } ?>
            
             
           </tbody>
         </table>
-      </div>
-    
 
-</main>
+        </div>
+    </main>
   </div>
 </div>
 

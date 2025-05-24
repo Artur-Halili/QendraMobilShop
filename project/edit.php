@@ -54,7 +54,7 @@ $user_data = $selectUser->fetch();
             <label for="floatingInput">Name</label>
           </div>
           <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Description" name="Description" value="<?php echo $user_data['Description']; ?>">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Description" name="Description" value="<?php echo $user_data['Desc']; ?>">
             <label for="floatingInput">Description</label>
           </div>
           <div class="form-floating">

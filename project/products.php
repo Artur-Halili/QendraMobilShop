@@ -1,20 +1,12 @@
-<?php
+<?php 
 
-session_start();
+  session_start();
 
-include_once('config.php');
-if(empty($_SESSION['username'])){
-    header('Location:login.php');
-}
 
-$sql="SELECT * FROM users";
-$selectUsers=$conn->prepare($sql);
-$selectUsers->execute();
+ ?>
 
-$users_data=$selectUsers->fetchall();
-?>
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
  <html>
  <head>
   <title>Dashboard</title>
@@ -30,8 +22,15 @@ $users_data=$selectUsers->fetchall();
   <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
   <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
   <meta name="theme-color" content="#7952b3">
+
+  <style>
+    #floatingInput{
+      margin: 20px 0px;
+    }
+  </style>
  </head>
  <body>
+ 
  
  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><?php echo "Welcome to dashboard ".$_SESSION['username']; ?></a>
@@ -50,8 +49,8 @@ $users_data=$selectUsers->fetchall();
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
-           
+      <ul class="nav flex-column">
+    <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 'true') { ?>
             <li class="nav-item">
               <a class="nav-link" href="home.php">
                 <span data-feather="file"></span>
@@ -64,33 +63,22 @@ $users_data=$selectUsers->fetchall();
               Dashboard
             </a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="aboutus.php">
-              <span data-feather="home"></span>
-              About Us
-            </a>
-          </li>
-
           <li class="nav-item">
             <a class="nav-link" href="list_products.php">
               <span data-feather="file"></span>
               Products
             </a>
           </li>
+        <?php } ?>
           <li class="nav-item">
-            <a class="nav-link" href="orders.php">
+            <a class="nav-link" href="bookings.php">
               <span ></span>
               Bookings
             </a>
           </li>
         </ul>
-     
-    
 
-
-        
-      </div>
+        </div>
     </nav>
 
 
@@ -101,43 +89,37 @@ $users_data=$selectUsers->fetchall();
       </div>
 
 
-
-<h2>Users</h2>
-<div class="table-responsive">
-  <table class="table table-striped table-sm">
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Emri</th>
-        <th scope="col">Username</th>
-        <th scope="col">Email</th>
-        <th scope="col">Update</th>
-        <th scope="col">Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php foreach ($users_data as $user_data) { ?>
-
-        <tr>
-                <td><?php echo $user_data['id']; ?></td>
-                <td><?php echo $user_data['name']; ?></td>
-                <td><?php echo $user_data['username']; ?></td>
-                <td><?php echo $user_data['email']; ?></td>
-                <!-- If we want to update a user we need to link into editUsers.php -->
-                <td><a href="editUsers.php?id=<?= $user_data['id'];?>">Update</a></td>
-                  <!-- If we want to delete a user we need to link into deleteUsers.php -->
-                <td><a href="deleteUsers.php?id=<?= $user_data['id'];?>">Delete</a></td>
-              </tr>
-              
-           <?php  } ?>
-           
-            
-          </tbody>
-        </table>
-      </div>
     
 
-</main>
+
+      <h2>Movies</h2>
+
+
+       <form action="addProducts.php" method="post">
+    
+        
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Product Name" name="Product_name" >
+          <label for="floatingInput">Name</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Product Description" name="Product_desc" >
+          <label for="floatingInput">Product Description</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Price" name="Product_Price" >
+          <label for="floatingInput">Product Price</label>
+        </div>
+
+        <div class="form-floating">
+          <input type="file" class="form-control" id="floatingInput" placeholder="Image" name="Product_image" >
+          <label for="floatingInput">Image</label>
+        </div>
+         <button  class="w-100 btn btn-lg btn-primary" type="submit" name="submit"> Add Movie </button> 
+      </form>
+      
+      </div>
+    </main>
   </div>
 </div>
 

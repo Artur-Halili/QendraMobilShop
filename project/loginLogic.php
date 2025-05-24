@@ -29,6 +29,7 @@ if(isset($_POST['submit'])){
     $_SESSION['Name']=$data['Name'];
     $_SESSION['surname']=$data['surname'];
     $_SESSION['email']=$data['email'];
+    $_SESSION['is_admin']=$data['is_admin'];
    
 
     header('Location:dashboard.php');

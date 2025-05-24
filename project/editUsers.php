@@ -92,9 +92,15 @@ $user_data=$selectUser->fetch();
           <label for="floatingInput">Id</label>
         </div>
         <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Name" name="Name" value="<?php echo  $user_data['Name'] ?>">
-          <label for="floatingInput">Name</label>
-        </div>
+  <input 
+    type="text" 
+    class="form-control" 
+    id="floatingInput" 
+    placeholder="Name" 
+    name="Name" 
+    value="<?php echo htmlspecialchars($user_data['Name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+  <label for="floatingInput">Name</label>
+</div>
 
         <div class="form-floating">
           <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username" value="<?php echo  $user_data['username'] ?>">

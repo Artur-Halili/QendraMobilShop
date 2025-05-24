@@ -53,7 +53,8 @@ $users_data=$selectUsers->fetchAll();
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
       <ul class="nav flex-column">
-           <?php if ($_SESSION['is_admin'] == 'true') { ?>
+           <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 'true') { ?>
+<?php } ?>
             <li class="nav-item">
               <a class="nav-link" href="home.php">
                 <span data-feather="file"></span>
@@ -69,11 +70,11 @@ $users_data=$selectUsers->fetchAll();
           <li class="nav-item">
             <a class="nav-link" href="list_products.php">
               <span data-feather="file"></span>
-              Movies
+              Products
             </a>
           </li>
 
-          <?php } ?>
+          <?php  ?>
           <li class="nav-item">
             <a class="nav-link" href="bookings.php">
               <span ></span>
@@ -95,9 +96,11 @@ $users_data=$selectUsers->fetchAll();
       </div>
 
 
-    <?php if ($_SESSION['is_admin'] == 'true') { ?>
-        <h2>Movies</h2>
-      <a href="movies.php" class="btn btn-primary">Add Movie</a>
+ <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 'true') { ?>
+  <!-- admin-only menu items and content -->
+<?php } ?>
+        <h2>Products</h2>
+      <a href="products.php" class="btn btn-primary">Add Product</a>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
@@ -115,7 +118,7 @@ $users_data=$selectUsers->fetchAll();
                 <tr>
                 <td><?php echo $user_data['id']; ?></td>
                 <td><?php echo $user_data['Name']; ?></td>
-                <td><?php echo $user_data['Description']; ?></td>
+                <td><?php echo $user_data['Desc']; ?></td>
                 <td><?php echo $user_data['Price']; ?></td>
                 <!-- If we want to update a movie we created a link which will link us in edit.php file: -->
                 <td><a href="edit.php?id=<?= $user_data['id'];?>">Update</a></td>
@@ -129,7 +132,7 @@ $users_data=$selectUsers->fetchAll();
           </tbody>
         </table>
       </div>
-     <?php } ?>
+     <?php ?>
     </main>
   </div>
 </div>

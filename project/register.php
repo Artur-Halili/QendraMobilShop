@@ -7,52 +7,43 @@
 
 	include_once('config.php');
 
-	if(isset($_POST['submit']))
-	{
+if (isset($_POST['submit'])) {
+    $Name = $_POST['Name'] ?? '';
+    $username = $_POST['username'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $surname = $_POST['surname'] ?? '';
+    $tempPass = $_POST['password'] ?? '';
+    $tempConfirm = $_POST['confirm_password'] ?? '';
 
-		$name = $_POST['Name'];
-		$username = $_POST['username'];
-		$email = $_POST['email'];
-		$surname = $_POST['surname'];
+    if (empty($Name) || empty($username) || empty($surname) || empty($email) || empty($tempPass) || empty($tempConfirm)) {
+        echo "You have not filled in all the fields.";
+        exit;
+    }
 
-		$tempPass = $_POST['password'];
-		$password = password_hash($tempPass, PASSWORD_DEFAULT);
+    if ($tempPass !== $tempConfirm) {
+        echo "Passwords do not match.";
+        exit;
+    }
 
+    $password = password_hash($tempPass, PASSWORD_DEFAULT);
 
+    $sql = "INSERT INTO users (Name, username, email, surname, password) 
+            VALUES (:Name, :username, :email, :surname, :password)";
 
-		$tempConfirm = $_POST['confirm_password'];
-		$confirm_password = password_hash($tempConfirm, PASSWORD_DEFAULT);
+    $insertSql = $conn->prepare($sql);
+    $insertSql->bindParam(':Name', $Name);
+    $insertSql->bindParam(':username', $username);
+    $insertSql->bindParam(':surname', $surname);
+    $insertSql->bindParam(':email', $email);
+    $insertSql->bindParam(':password', $password);
+    $insertSql->execute();
 
-
-		if(empty($Name) || empty($username) || empty($surname) || empty($email) || empty($password) || empty($confirm_password))
-		{
-			echo "You have not filled in all the fields.";
-		}
-		else
-		{
-
-			$sql = "INSERT INTO users(Name,username,email,surname,password, confirm_password) VALUES (:Name, :username, :email,:surname, :password, :confirm_password)";
-
-			$insertSql = $conn->prepare($sql);
-			
-
-			$insertSql->bindParam(':Name', $Name);
-			$insertSql->bindParam(':username', $username);
-			$insertSql->bindParam(':surname', $surname);
-			$insertSql->bindParam(':email', $email);
-			$insertSql->bindParam(':password', $password);
-			$insertSql->bindParam(':confirm_password', $confirm_password);
-
-			$insertSql->execute();
-
-			header("Location: login.php");
+    header("Location: login.php");
+    exit;
+}
 
 
-		}
-
-
-
-	}
+	
 
 
 ?>

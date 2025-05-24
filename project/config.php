@@ -2,7 +2,7 @@
 $user ='root';
 $pass='';
 $server='localhost';
-$dbname='qms';
+$dbname='mobilestore';
 
 try{
 $conn=new PDO("mysql:host=$server;dbname=$dbname",$user,$pass);
