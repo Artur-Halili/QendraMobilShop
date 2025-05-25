@@ -26,7 +26,8 @@
       align-items: center;
       padding-top: 40px;
       padding-bottom: 40px;
-      background-color: #f5f5f5;
+     background-color:#273036;
+     color:white;
     }
 
 
@@ -36,6 +37,7 @@
       max-width: 330px;
       padding: 15px;
       margin: auto;
+      
     }
     .form-signin .checkbox {
       font-weight: 400;
@@ -58,23 +60,35 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+
+#floatinginput{
+  color:gray;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#floatingpassword{
+  color:gray;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+
   </style>
 </head>
 <body class="text-center">
 <!-- Creating a from which will post some data in loginLogic.php file -->
 <main class="form-signin">
   <form action="loginLogic.php" method="post">
-    <img class="mb-4" src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <img class="mb-4" src="images/logo.png" alt="" width="100" height="100">
+    <h1 class="h3 mb-3 fw-light">Please sign in</h1>
 
 
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
-      <label for="floatingInput">Username</label>
+      <label id="floatinginput" for="floatingInput">Username</label>
     </div>
     <div class="form-floating">
       <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
-      <label for="floatingPassword">Password</label>
+      <label id="floatingpassword"  for="floatingPassword">Password</label>
     </div>
 
 

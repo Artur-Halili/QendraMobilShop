@@ -36,6 +36,7 @@ $users_data=$selectUsers->fetchAll();
  <body>
  
  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <img id="logo" src="images/logos.png">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><?php echo "Welcome to dashboard ".$_SESSION['username']; ?></a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -50,39 +51,51 @@ $users_data=$selectUsers->fetchAll();
 
 <div class="container-fluid">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
       <div class="position-sticky pt-3">
       <ul class="nav flex-column">
            <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 'true') { ?>
 <?php } ?>
             <li class="nav-item">
-              <a class="nav-link" href="home.php">
+              <a id="homie" class="nav-link" href="home.php">
                 <span data-feather="file"></span>
                 Home
               </a>
             </li>
+            <br>
+
+                 <li class="nav-item">
+              <a id="aboutus" class="nav-link" href="aboutus.php">
+                <span data-feather="file"></span>
+                About Us
+              </a>
+            </li>
+
+            <br>
+
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="dashboard.php">
+            <a id="dashb" class="nav-link active" aria-current="page" href="dashboard.php">
               <span data-feather="home"></span>
               Dashboard
             </a>
           </li>
+          <br>
           <li class="nav-item">
-            <a class="nav-link" href="list_products.php">
+            <a id="products" class="nav-link" href="list_products.php">
               <span data-feather="file"></span>
               Products
             </a>
           </li>
-
+<br>
           <?php  ?>
           <li class="nav-item">
-            <a class="nav-link" href="bookings.php">
+            <a id="orders" class="nav-link" href="order.php">
               <span ></span>
-              Bookings
+              Orders
             </a>
           </li>
         </ul>
-
+<br>
 
        
       </div>
@@ -100,15 +113,15 @@ $users_data=$selectUsers->fetchAll();
   <!-- admin-only menu items and content -->
 <?php } ?>
         <h2>Products</h2>
-      <a href="products.php" class="btn btn-primary">Add Product</a>
+      <a id="prodbtn" href="products.php" class="btn btn-primary">Add Product</a>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
               <th scope="col">Id</th>
               <th scope="col">Name</th>
-              <th scope="col">Username</th>
-              <th scope="col">Email</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
               <th scope="col">Update</th>
               <th scope="col">Delete</th>
             </tr>
@@ -143,6 +156,68 @@ $users_data=$selectUsers->fetchAll();
 
       <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
   </body>
+
+  <style>
+    #homie{
+ background-color: #273036;
+  color:white;
+  border-radius:15px;
+  text-align: center;
+}
+
+#logo{
+width:70px;
+height:70px;
+}
+
+#sidebarMenu{
+  
+}
+
+#prodbtn{
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+	
+}
+
+a{
+  text-decoration:none;
+  color:black;
+}
+
+a:hover{
+color:cornflowerblue;
+transition: ease-in 0.3s;
+transform: scale(1.1);
+}
+
+#aboutus{
+   background-color: #273036;
+  color:white;
+  border-radius:15px;
+  text-align: center;
+}
+
+#products{
+   background-color: #273036;
+  color:white;
+  border-radius:15px;
+  text-align: center;
+}
+
+#orders{
+   background-color: #273036;
+  color:white;
+  border-radius:20px;
+  text-align: center;
+}
+
+#dashb{   
+background-color: #273036;
+  color:white;
+  border-radius:20px;
+  text-align: center;
+}
+  </style>
 </html>
 
 

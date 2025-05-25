@@ -27,6 +27,36 @@ $movie_data=$selectMovies->fetchAll();
  </head>
  <body>
 
+<style>
+  #logo{
+width:60px;
+height:60px;
+}
+
+.col:hover{
+  transition: ease-in 0.3s;
+transform: scale(1.1);
+
+}
+
+a:hover{
+color:cornflowerblue;
+transition: ease-in 0.3s;
+transform: scale(1.1);
+}
+
+.col{
+
+}
+
+#dashb{
+  right:200px;
+  top:30px;
+  color:white;
+  position:absolute;
+}
+  </style>
+
  <header>
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
@@ -50,8 +80,14 @@ $movie_data=$selectMovies->fetchAll();
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Album</strong>
+        <img id="logo" src="images/logos.png">
+        <strong>endra Mobil Shop</strong> <li class="nav-item">
+            <a id="dashb" class="nav-link active" aria-current="page" href="dashboard.php">
+              <span data-feather="home"></span>
+              Dashboard
+            </a>
+            <br>
+          </li>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <a href="dashboard.php"><span class="navbar-toggler-icon"></span></a>
@@ -59,25 +95,24 @@ $movie_data=$selectMovies->fetchAll();
     </div>
   </div>
 </header>
-
-<section class="py-5 text-center container">
+<section  class="py-5 text-center container">
     <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Album example</h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+      <div class=" mx-auto">
+        <h1 class="fw-light">Katalogu</h1>
+        <p class="lead text-muted">Perfshirja e Produkteve per Nevojat e juaj.</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          <a href="https://www.instagram.com/mobishopqendra/?__d=1" class="btn btn-primary my-2">Instagram</a>
+          <a href="https://www.facebook.com/p/MOBIL-SHOP-QENDRA-100057218270929/" class="btn btn-secondary my-2">Facebook</a>
         </p>
       </div>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
+  <div class="album py-5 bg-dark">
     <div class="container">
 
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 ">
 
 
         <?php
@@ -94,7 +129,7 @@ $products_data = $selectProducts->fetchAll();
 <?php foreach ($products_data as $product) { ?>
   <div class="col">
     <div class="card shadow-sm">
-      <img src="images/<?php echo $product['Images/ip16.jpg']; ?>" height="350">
+<img src="images/<?php echo $product['Image']; ?>" height="300">
       <div class="card-body">
         <h4><?php echo $product['Name']; ?></h4>
         <p class="card-text"><?php echo $product['Desc']; ?></p>

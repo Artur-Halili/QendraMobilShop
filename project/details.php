@@ -109,11 +109,3 @@ $movie_data=$selectMovies->fetch();
   </div>
 </header>
  
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Book your ticket</h1>
-        <p class="lead text-muted">You can book your ticket by clicking the button below</p>
-      </div>
-    </div>
-  </section>
