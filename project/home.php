@@ -82,9 +82,7 @@ transform: scale(1.1);
       <a href="#" class="navbar-brand d-flex align-items-center">
         <img id="logo" src="images/logos.png">
         <strong>endra Mobil Shop</strong> <li class="nav-item">
-            <a id="dashb" class="nav-link active" aria-current="page" href="dashboard.php">
-              <span data-feather="home"></span>
-              Dashboard
+          
             </a>
             <br>
           </li>

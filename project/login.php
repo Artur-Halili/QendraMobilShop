@@ -26,8 +26,9 @@
       align-items: center;
       padding-top: 40px;
       padding-bottom: 40px;
-     background-color:#273036;
-     color:white;
+     background: #000000;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
+color:white;
     }
 
 
@@ -71,6 +72,23 @@
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
+#signupi{
+  color:cornflowerblue;
+}
+
+#signini{
+  background: #000000;
+background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
+border-color:white;
+color:yellow;
+}
+
+.custom-hover:hover{
+  transition: ease-in 0.2s;
+transform: scale(1.1);
+}
+
+
 
   </style>
 </head>
@@ -78,14 +96,14 @@
 <!-- Creating a from which will post some data in loginLogic.php file -->
 <main class="form-signin">
   <form action="loginLogic.php" method="post">
-    <img class="mb-4" src="images/logo.png" alt="" width="100" height="100">
+    <img class="mb-4" src="images/logos.png" alt="" width="100" height="100">
     <h1 class="h3 mb-3 fw-light">Please sign in</h1>
 
 
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
       <label id="floatinginput" for="floatingInput">Username</label>
-    </div>
+    </div><br>
     <div class="form-floating">
       <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
       <label id="floatingpassword"  for="floatingPassword">Password</label>
@@ -97,8 +115,8 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit">Sign in</button>
-  <p>Already have an account:<a href="index.php" >Sign up</a> </p>
+    <button id="signini" class="w-100 btn btn-lg btn-primary custom-hover" type="submit" name="submit">Sign in</button><br>
+    <p>Dont have an account:<a id="signupi" href="index.php" >Sign up</a> </p>
   </form>
 </main>
 

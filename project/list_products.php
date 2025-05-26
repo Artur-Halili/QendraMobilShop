@@ -96,7 +96,14 @@ $users_data=$selectUsers->fetchAll();
           </li>
         </ul>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<img id="logos" src="images/logos.png">
+<p id="adresa">Ulpian te Rrethi me Flamur</p>
+<br>
        
       </div>
     </nav>
@@ -165,9 +172,26 @@ $users_data=$selectUsers->fetchAll();
   text-align: center;
 }
 
+#adresa{
+  position:absolute;
+bottom:40px;
+right:10%;
+  color: gray;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+}
+
 #logo{
 width:70px;
 height:70px;
+}
+
+#logos{
+width:100px;
+height:100px;
+position:absolute;
+left:65px;
+bottom:60px;
 }
 
 #sidebarMenu{

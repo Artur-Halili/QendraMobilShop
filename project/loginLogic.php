@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
 
     header('Location:dashboard.php');
   }else{
-    echo "The password is not valid";
+    echo "The password is not valid"; 
   }
   }
 }
