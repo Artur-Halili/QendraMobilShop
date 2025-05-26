@@ -175,7 +175,7 @@ $users_data=$selectUsers->fetchAll();
 #adresa{
   position:absolute;
 bottom:40px;
-right:10%;
+right:7%;
   color: gray;
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 100;
