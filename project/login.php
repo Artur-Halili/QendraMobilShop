@@ -72,21 +72,23 @@ color:white;
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
-#signupi{
-  color:cornflowerblue;
+a{
+  color:white;
 }
 
 #signini{
   background: #000000;
 background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
-border-color:white;
 color:yellow;
+transition:ease 0.2s;
 }
 
 .custom-hover:hover{
   transition: ease-in 0.2s;
 transform: scale(1.1);
+border-color:red;
 }
+
 
 
 

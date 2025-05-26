@@ -35,7 +35,7 @@ $users_data=$selectUsers->fetchall();
  
  <header id="headers" class="navbar navbar-dark sticky-top  flex-md-nowrap p-0 shadow">
   <img id="logo" src="images/logos.png"><strong id="titla">endra Mobil Shop</strong><br>
-  <a id="welcome" class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><?php echo "Welcome to Dashboard ".$_SESSION['username']; ?></a>
+  <a id="welcome" class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="dashboard.php"><?php echo "Welcome to Dashboard ".$_SESSION['username']; ?></a><br>
   <button class="navbar-toggler position-absolute  d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span id="navigabar" class="navbar-toggler-icon"></span>
   </button>
@@ -90,7 +90,15 @@ $users_data=$selectUsers->fetchall();
             </a>
           </li>
         </ul>
-        <br><br><br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img id="logos" src="images/logos.png">
+<p id="adresa">Ulpian te Rrethi me Flamur</p>
+<br>
+<br>
+<br>
      
     
 
@@ -170,7 +178,24 @@ background-color: #273036;
 }
 
 #welcome{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
+#adresa{
+  position:absolute;
+bottom:40px;
+right:7%;
+  color: gray;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+}
+
+#logos{
+width:100px;
+height:100px;
+position:absolute;
+left:65px;
+bottom:60px;
 }
 
 #titla{

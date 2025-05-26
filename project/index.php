@@ -22,7 +22,43 @@
 	  align-items: center;
 	  padding-top: 40px;
 	  padding-bottom: 40px;
-	  background-color: #f5f5f5;
+ background: #000000;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
+	}
+
+	a{
+		color:white;
+	}
+
+	#logos{
+		width:76px;
+		height:76px;
+	}
+
+	.register-btn{
+		color:white;
+	}
+
+	.divis-btns{
+		color:white;
+	}
+
+	#signini{
+		color:white;
+	}
+
+	.btn-primary{
+		background: #000000;
+background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
+border-color:red;
+color:yellow;
+transition:ease 0.2s;
+	}
+
+	.btn-primary:hover{
+		  transition: ease-in 0.2s;
+transform: scale(1.1);
+color:yellow;
 	}
 
 	.form-signin {
@@ -59,8 +95,8 @@
 <!-- Creating a form which will post us some data in register.php file -->
 <main class="form-signin">
   <form action="register.php" method="post">
-    <img class="mb-4" src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Register</h1>
+    <img id="logos" class="mb-4" src="images/logos.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal register-btn">Register</h1>
 
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" placeholder="Name" name="Name">
@@ -87,13 +123,13 @@
       <label for="floatingPassword">Confirm Password</label>
     </div>
 
-    <div class="checkbox mb-3">
+    <div class="checkbox mb-3 divis-btns">
       <label>
-        <input type="checkbox" value="remember-me"> Remember me
+        <input class="remember-btn" type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit">Sign up</button>
-    <span>Already have an account: </span><a href="login.php">Sign in</a>
+    <span id="signini">Already have an account: </span><a  href="login.php">Sign in</a>
   </form>
 </main>
 
