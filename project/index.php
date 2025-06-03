@@ -31,8 +31,8 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%
 	}
 
 	#logos{
-		width:76px;
-		height:76px;
+		width:70px;
+		height:70px;
 	}
 
 	.register-btn{
@@ -49,8 +49,8 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%
 
 	.btn-primary{
 		background: #000000;
-background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
-border-color:red;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
+border-color:white;
 color:yellow;
 transition:ease 0.2s;
 	}
@@ -59,6 +59,7 @@ transition:ease 0.2s;
 		  transition: ease-in 0.2s;
 transform: scale(1.1);
 color:yellow;
+border-color:red;
 	}
 
 	.form-signin {

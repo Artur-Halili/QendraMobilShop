@@ -83,6 +83,10 @@ color:yellow;
 transition:ease 0.2s;
 }
 
+.custom-hover{
+  border-color:white;
+}
+
 .custom-hover:hover{
   transition: ease-in 0.2s;
 transform: scale(1.1);

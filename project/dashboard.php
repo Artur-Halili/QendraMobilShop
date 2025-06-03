@@ -177,6 +177,26 @@ background-color: #273036;
   text-align: center;
 }
 
+#homie:hover{
+  color:yellow;
+}
+
+#dashb:hover{
+  color:yellow;
+}
+
+#aboutus:hover{
+  color:yellow;
+}
+
+#Products:hover{
+  color:yellow;
+}
+
+#orders:hover{
+  color:yellow;
+}
+
 #welcome{
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

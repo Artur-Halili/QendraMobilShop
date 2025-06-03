@@ -101,6 +101,13 @@ $users_data=$selectUsers->fetchAll();
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <img id="logos" src="images/logos.png">
 <p id="adresa">Ulpian te Rrethi me Flamur</p>
 <br>
@@ -174,7 +181,7 @@ $users_data=$selectUsers->fetchAll();
 
 #adresa{
   position:absolute;
-bottom:40px;
+bottom:70px;
 right:7%;
   color: gray;
   font-family: 'Helvetica Neue', sans-serif;
@@ -191,16 +198,42 @@ width:100px;
 height:100px;
 position:absolute;
 left:65px;
-bottom:60px;
+bottom:100px;
 }
 
 #sidebarMenu{
   
 }
 
+#homie:hover{
+  color:yellow;
+}
+
+#dashb:hover{
+  color:yellow;
+}
+
+#aboutus:hover{
+  color:yellow;
+}
+
+#products:hover{
+  color:yellow;
+}
+
+#orders:hover{
+  color:yellow;
+}
+
 #prodbtn{
-  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+background: #000000;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
+border-color:white
 	
+}
+
+#prodbtn:hover{
+  color:yellow;
 }
 
 a{

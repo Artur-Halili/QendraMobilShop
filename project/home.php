@@ -55,6 +55,11 @@ transform: scale(1.1);
   color:white;
   position:absolute;
 }
+
+.shadow-sm{
+
+font-family:"Trebuchet MS"
+}
   </style>
 
  <header>
@@ -79,7 +84,7 @@ transform: scale(1.1);
 
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center">
+      <a href="home.php" class="navbar-brand d-flex align-items-center">
         <img id="logo" src="images/logos.png">
         <strong>endra Mobil Shop</strong> <li class="nav-item">
           
