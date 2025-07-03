@@ -33,6 +33,12 @@ width:60px;
 height:60px;
 }
 
+.navbar{
+  		-webkit-box-shadow:0px 0px 105px 45px rgba(52,62,82,1);
+-moz-box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
+box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
+}
+
 .col:hover{
   transition: ease-in 0.3s;
 transform: scale(1.1);
@@ -43,6 +49,12 @@ a:hover{
 color:cornflowerblue;
 transition: ease-in 0.3s;
 transform: scale(1.1);
+}
+
+.album{
+  		-webkit-box-shadow:0px 0px 105px 45px rgba(52,62,82,1);
+-moz-box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
+box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
 }
 
 .col{

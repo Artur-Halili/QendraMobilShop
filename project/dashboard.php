@@ -94,8 +94,7 @@ $users_data=$selectUsers->fetchall();
         <br>
         <br>
         <br>
-        <img id="logos" src="images/logos.png">
-<p id="adresa">Ulpian te Rrethi me Flamur</p>
+        
 <br>
 <br>
 <br>
@@ -130,6 +129,8 @@ $users_data=$selectUsers->fetchall();
       </tr>
     </thead>
     <tbody>
+      <img id="logos" src="images/logos.png">
+<p id="adresa">Ulpian te Rrethi me Flamur</p>
       <?php foreach ($users_data as $user_data) { ?>
 
         <tr>
@@ -177,24 +178,41 @@ background-color: #273036;
   text-align: center;
 }
 
+.container-fluid{
+-webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+}
+
 #homie:hover{
-  color:yellow;
+ 
+-webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #dashb:hover{
-  color:yellow;
+ -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #aboutus:hover{
-  color:yellow;
+ -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #Products:hover{
-  color:yellow;
+ -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #orders:hover{
-  color:yellow;
+ -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #welcome{
@@ -203,8 +221,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 
 #adresa{
   position:absolute;
-bottom:40px;
-right:7%;
+bottom:10px;
+right:45%;
   color: gray;
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 100;
@@ -214,8 +232,10 @@ right:7%;
 width:100px;
 height:100px;
 position:absolute;
-left:65px;
+left:45%;
 bottom:60px;
+background-color:#273036;
+border-radius:15px;
 }
 
 #titla{
