@@ -43,6 +43,7 @@ box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
   transition: ease-in 0.3s;
 transform: scale(1.1);
 
+
 }
 
 a:hover{
@@ -58,6 +59,13 @@ box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
 }
 
 .col{
+
+
+padding-right: 40px;
+
+
+
+padding-left: 30px;
 
 }
 
@@ -105,7 +113,7 @@ font-family:"Trebuchet MS"
           </li>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <a href="dashboard.php"><span class="navbar-toggler-icon"></span></a>
+        <a  href="dashboard.php"><span class="navbar-toggler-icon"></span></a>
       </button>
     </div>
   </div>
@@ -144,7 +152,7 @@ $products_data = $selectProducts->fetchAll();
 <?php foreach ($products_data as $product) { ?>
   <div class="col">
     <div class="card shadow-sm">
-<img src="images/<?php echo $product['Image']; ?>" height="300">
+<img src="images/<?php echo $product['Image']; ?>" height="300" >
       <div class="card-body">
         <h4><?php echo $product['Name']; ?></h4>
         <p class="card-text"><?php echo $product['Desc']; ?></p>

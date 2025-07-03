@@ -171,6 +171,10 @@ height:70px;
 background-color: #273036;
 }
 
+.position-sticky{
+  
+}
+
 #homie{
  background-color:#273036;
   color:white;
@@ -185,31 +189,35 @@ box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #homie:hover{
- 
+ color:yellow;
 -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #dashb:hover{
+  color:yellow;
  -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #aboutus:hover{
+  color:yellow;
  -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #Products:hover{
+  color:yellow;
  -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #orders:hover{
+  color:yellow;
  -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
@@ -283,7 +291,7 @@ transform: scale(1.0);
 }
 
 #sidebarMenu{
-  background-color:#273036;
+background-color:transparent;
 }
 
 a{

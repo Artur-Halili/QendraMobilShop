@@ -234,6 +234,8 @@ border-color:white
 
 #prodbtn:hover{
   color:yellow;
+  transition: ease-in 0.3s;
+transform: scale(1.0);
 }
 
 a{
