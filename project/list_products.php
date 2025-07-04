@@ -36,7 +36,7 @@ $users_data=$selectUsers->fetchAll();
  <body>
  
  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <img id="logo" src="images/logos.png">
+ <img id="logo" src="images/logos.png"><strong id="titla">endra Mobil Shop</strong><br>
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><?php echo "Welcome to dashboard ".$_SESSION['username']; ?></a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -95,21 +95,14 @@ $users_data=$selectUsers->fetchAll();
             </a>
           </li>
         </ul>
+   <br>
+        <br>
+        <br>
+        <br>
+        
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<img id="logos" src="images/logos.png">
-<p id="adresa">Ulpian te Rrethi me Flamur</p>
 <br>
        
       </div>
@@ -141,6 +134,8 @@ $users_data=$selectUsers->fetchAll();
             </tr>
           </thead>
           <tbody>
+            <img id="logos" src="images/logos.png">
+<p id="adresa">Ulpian te Rrethi me Flamur</p>
             <?php foreach ($users_data as $user_data) { ?>
                 <tr>
                 <td><?php echo $user_data['id']; ?></td>
@@ -179,13 +174,27 @@ $users_data=$selectUsers->fetchAll();
   text-align: center;
 }
 
+#titla{
+  color:white;
+  position:absolute;
+  left:60px;
+  transition: ease-in 0.3s;
+transform: scale(1.0);
+}
+
 #adresa{
   position:absolute;
-bottom:70px;
-right:7%;
+bottom:10px;
+right:46%;
   color: gray;
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 100;
+}
+
+.container-fluid{
+-webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #logo{
@@ -194,11 +203,14 @@ height:70px;
 }
 
 #logos{
+margin:-10px;
 width:100px;
 height:100px;
 position:absolute;
-left:65px;
-bottom:100px;
+left:45%;
+bottom:60px;
+background-color:#273036;
+border-radius:15px;
 }
 
 #sidebarMenu{
@@ -207,22 +219,37 @@ bottom:100px;
 
 #homie:hover{
   color:yellow;
+  -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #dashb:hover{
   color:yellow;
+  -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #aboutus:hover{
   color:yellow;
+  -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #products:hover{
   color:yellow;
+  -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #orders:hover{
   color:yellow;
+  -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
+-moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #prodbtn{

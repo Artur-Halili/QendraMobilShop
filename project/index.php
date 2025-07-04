@@ -33,10 +33,10 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%
 	#logos{
 		width:70px;
 		height:70px;
-		-webkit-box-shadow:0px 0px 105px 45px rgba(52,62,82,1);
--moz-box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
-box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
+		
 	}
+
+	
 
 	.register-btn{
 		color:white;

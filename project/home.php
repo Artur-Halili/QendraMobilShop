@@ -76,9 +76,12 @@ padding-left: 30px;
   position:absolute;
 }
 
-.shadow-sm{
+.shadow-sm1{
+background-color: #273036;
+border:solid;
+border-radius:8px;
+color:white;
 
-font-family:"Trebuchet MS"
 }
   </style>
 
@@ -151,7 +154,7 @@ $products_data = $selectProducts->fetchAll();
 
 <?php foreach ($products_data as $product) { ?>
   <div class="col">
-    <div class="card shadow-sm">
+    <div class="card shadow-sm1">
 <img src="images/<?php echo $product['Image']; ?>" height="300" >
       <div class="card-body">
         <h4><?php echo $product['Name']; ?></h4>
