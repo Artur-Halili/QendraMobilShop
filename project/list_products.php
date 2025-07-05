@@ -123,8 +123,8 @@ $users_data=$selectUsers->fetchAll();
       <a id="prodbtn" href="products.php" class="btn btn-primary">Add Product</a>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
-          <thead>
-            <tr>
+          <thead class="col1">
+            <tr class="col1">
               <th scope="col">Id</th>
               <th scope="col">Name</th>
               <th scope="col">Description</th>
@@ -167,6 +167,9 @@ $users_data=$selectUsers->fetchAll();
   </body>
 
   <style>
+
+  
+
     #homie{
  background-color: #273036;
   color:white;
@@ -184,17 +187,15 @@ transform: scale(1.0);
 
 #adresa{
   position:absolute;
-bottom:10px;
-right:46%;
-  color: gray;
-  font-family: 'Helvetica Neue', sans-serif;
+bottom:7px;
+right:46.5%;
+  color: black;
+  font-family: bold;
   font-weight: 100;
 }
 
 .container-fluid{
--webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
--moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+
 }
 
 #logo{
@@ -211,6 +212,9 @@ left:45%;
 bottom:60px;
 background-color:#273036;
 border-radius:15px;
+-webkit-box-shadow:0px 0px 7px 7px  rgba(94, 101, 99, 0.84);
+-moz-box-shadow: 0px 0px 7px 7px rgba(94, 101, 99, 0.84);
+box-shadow: 0px 0px 7px 7px rgba(94, 101, 99, 0.84);
 }
 
 #sidebarMenu{

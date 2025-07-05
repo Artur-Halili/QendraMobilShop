@@ -183,9 +183,7 @@ background-color: #273036;
 }
 
 .container-fluid{
--webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
--moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+
 }
 
 #homie:hover{
@@ -197,9 +195,8 @@ box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 
 #dashb:hover{
   color:yellow;
- -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
--moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+   transition: ease-in 0.3s;
+transform: scale(1.0);
 }
 
 #aboutus:hover{
@@ -228,15 +225,16 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 }
 
 #adresa{
-  position:absolute;
-bottom:10px;
-right:45%;
-  color: gray;
-  font-family: 'Helvetica Neue', sans-serif;
+ position:absolute;
+bottom:7px;
+right:46.5%;
+  color: black;
+  font-family: bold;
   font-weight: 100;
 }
 
 #logos{
+margin:-10px;
 width:100px;
 height:100px;
 position:absolute;
@@ -244,6 +242,9 @@ left:45%;
 bottom:60px;
 background-color:#273036;
 border-radius:15px;
+-webkit-box-shadow:0px 0px 7px 7px  rgba(94, 101, 99, 0.84);
+-moz-box-shadow: 0px 0px 7px 7px rgba(94, 101, 99, 0.84);
+box-shadow: 0px 0px 7px 7px rgba(94, 101, 99, 0.84);
 }
 
 #titla{
@@ -305,10 +306,11 @@ transform: scale(1.1);
 }
 
 #dashb{
-  color:white;
+  color:yellow;
   background-color:#273036;
   text-align: center;
   border-radius: 20px;
+
 }
   </style>
 

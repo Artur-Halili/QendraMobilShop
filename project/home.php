@@ -81,7 +81,10 @@ background-color: #273036;
 border:solid;
 border-radius:8px;
 color:white;
-
+-webkit-box-shadow:0px 0px 25px 5px rgba(189,199,196,0.84);
+-moz-box-shadow: 0px 0px 25px 5px rgba(189,199,196,0.84);
+box-shadow: 0px 0px 25px 5px rgba(189,199,196,0.84);
+font-family:italic,bold;
 }
   </style>
 
