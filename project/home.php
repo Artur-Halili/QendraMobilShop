@@ -40,7 +40,7 @@ box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
 }
 
 .col:hover{
-  transition: ease-in 0.3s;
+  transition: ease-in-out 0.3s;
 transform: scale(1.1);
 
 
@@ -48,7 +48,7 @@ transform: scale(1.1);
 
 a:hover{
 color:cornflowerblue;
-transition: ease-in 0.3s;
+transition: ease-in-out 0.3s;
 transform: scale(1.1);
 }
 
@@ -56,6 +56,7 @@ transform: scale(1.1);
   		-webkit-box-shadow:0px 0px 105px 45px rgba(52,62,82,1);
 -moz-box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
 box-shadow: 0px 0px 105px 45px rgba(52,62,82,1);
+
 }
 
 .col{

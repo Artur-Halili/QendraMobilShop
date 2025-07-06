@@ -19,7 +19,7 @@ $users_data=$selectUsers->fetchAll();
 <!DOCTYPE html>
  <html>
  <head>
-  <title>Dashboard</title>
+  <title>Products</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -37,7 +37,7 @@ $users_data=$selectUsers->fetchAll();
  
  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
  <img id="logo" src="images/logos.png"><strong id="titla">endra Mobil Shop</strong><br>
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><?php echo "Welcome to dashboard ".$_SESSION['username']; ?></a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="list_products.php"><?php echo "Welcome to Products ".$_SESSION['username']; ?></a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -63,8 +63,15 @@ $users_data=$selectUsers->fetchAll();
               </a>
             </li>
             <br>
+          <li class="nav-item">
+            <a id="dashb" class="nav-link active" aria-current="page" href="dashboard.php">
+              <span data-feather="home"></span>
+              Dashboard
+            </a>
+          </li>
+          <br>
 
-                 <li class="nav-item">
+             <li class="nav-item">
               <a id="aboutus" class="nav-link" href="aboutus.php">
                 <span data-feather="file"></span>
                 About Us
@@ -73,13 +80,6 @@ $users_data=$selectUsers->fetchAll();
 
             <br>
 
-          <li class="nav-item">
-            <a id="dashb" class="nav-link active" aria-current="page" href="dashboard.php">
-              <span data-feather="home"></span>
-              Dashboard
-            </a>
-          </li>
-          <br>
           <li class="nav-item">
             <a id="products" class="nav-link" href="list_products.php">
               <span data-feather="file"></span>
@@ -111,7 +111,7 @@ $users_data=$selectUsers->fetchAll();
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
+        <h1 class="h2">Mobile Store</h1>
         
       </div>
 
@@ -175,6 +175,7 @@ $users_data=$selectUsers->fetchAll();
   color:white;
   border-radius:15px;
   text-align: center;
+  
 }
 
 #titla{
@@ -183,6 +184,7 @@ $users_data=$selectUsers->fetchAll();
   left:60px;
   transition: ease-in 0.3s;
 transform: scale(1.0);
+
 }
 
 #adresa{
@@ -201,6 +203,7 @@ right:46.5%;
 #logo{
 width:70px;
 height:70px;
+
 }
 
 #logos{
@@ -222,35 +225,39 @@ box-shadow: 0px 0px 7px 7px rgba(94, 101, 99, 0.84);
 }
 
 #homie:hover{
-  color:yellow;
+  color:black;
+  background-color:white;
   -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #dashb:hover{
-  color:yellow;
+  color:black;
+  background-color:white;
   -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #aboutus:hover{
-  color:yellow;
+ color:black;
+  background-color:white;
   -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #products:hover{
-  color:yellow;
+  
   -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 }
 
 #orders:hover{
-  color:yellow;
+  color:black;
+  background-color:white;
   -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
 -moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
 box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
@@ -292,6 +299,11 @@ transform: scale(1.1);
   color:white;
   border-radius:15px;
   text-align: center;
+  color:black;
+  background-color:#f9f6ee;
+  -webkit-box-shadow:0px 0px 5px 5px rgba(209, 214, 215, 0.155);
+-moz-box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.155);
+box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.155);
 }
 
 #orders{

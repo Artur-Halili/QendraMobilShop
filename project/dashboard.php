@@ -73,9 +73,8 @@ $users_data=$selectUsers->fetchall();
               <span data-feather="home"></span>
               About Us
             </a>
-            <br>
           </li>
-
+<br>
           <li class="nav-item">
             <a id="Products" class="nav-link" href="list_products.php">
               <span data-feather="file"></span>
@@ -90,11 +89,12 @@ $users_data=$selectUsers->fetchall();
             </a>
           </li>
         </ul>
-        <br>
+<br>
         <br>
         <br>
         <br>
         
+<br>
 <br>
 <br>
 <br>
@@ -187,37 +187,41 @@ background-color: #273036;
 }
 
 #homie:hover{
- color:yellow;
--webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
--moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+ color:black;
+  background-color:white;
+-webkit-box-shadow:0px 0px 5px 5px rgba(209, 214, 215, 0.155);
+-moz-box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.155);
+box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.155);
 }
 
 #dashb:hover{
-  color:yellow;
+  
    transition: ease-in 0.3s;
-transform: scale(1.0);
+transform: scale(1.1);
 }
 
 #aboutus:hover{
-  color:yellow;
- -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
--moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+  color:black;
+  background-color:white;
+ -webkit-box-shadow:0px 0px 5px 5px rgba(209, 214, 215, 0.15);
+-moz-box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.15);
+box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.15);
 }
 
 #Products:hover{
-  color:yellow;
- -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
--moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+  color:black;
+  background-color:white;
+ -webkit-box-shadow:0px 0px 5px 5px rgba(209, 214, 215, 0.15);
+-moz-box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.15);
+box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.15);
 }
 
 #orders:hover{
-  color:yellow;
- -webkit-box-shadow:0px 0px 3px 3px rgba(166,186,191,0.15);
--moz-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
-box-shadow: 0px 0px 3px 3px rgba(166,186,191,0.15);
+  color:black;
+  background-color:white;
+ -webkit-box-shadow:0px 0px 5px 5px rgba(209, 214, 215, 0.15);
+-moz-box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.15);
+box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.15);
 }
 
 #welcome{
@@ -306,11 +310,13 @@ transform: scale(1.1);
 }
 
 #dashb{
-  color:yellow;
-  background-color:#273036;
+  color:black;
+  background-color:#f9f6ee;
   text-align: center;
   border-radius: 20px;
-
+ -webkit-box-shadow:0px 0px 5px 5px rgba(209, 214, 215, 0.155);
+-moz-box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.155);
+box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.155);
 }
   </style>
 

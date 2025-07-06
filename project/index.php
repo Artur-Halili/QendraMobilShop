@@ -33,21 +33,36 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%
 	#logos{
 		width:70px;
 		height:70px;
-		
+		top: -400px;
+		animation: drop1 0.6s ease forwards;
+	}
+
+	
+
+	@keyframes drop1{
+		0%{opacity:0}
+		70%{transform: translateY(15px)}
+		100%{transform: translateY(10px); opacity:1; }
 	}
 
 	
 
 	.register-btn{
 		color:white;
+		top: -400px;
+		animation: drop1 0.6s ease forwards;
 	}
 
 	.divis-btns{
 		color:white;
+		top: -400px;
+		animation: drop1 0.6s ease forwards;
 	}
 
 	#signini{
 		color:white;
+	top: -400px;
+		animation: drop1 0.6s ease forwards;
 	}
 
 	.btn-primary{
@@ -56,6 +71,8 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%
 border-color:white;
 color:yellow;
 transition:ease 0.2s;
+top: -400px;
+		animation: drop 0.6s ease forwards;
 	}
 
 	.btn-primary:hover{
@@ -70,10 +87,24 @@ border-color:red;
 	  max-width: 330px;
 	  padding: 15px;
 	  margin: auto;
+	  position:relative;
+	  
+	}
+
+	.form-control{
+		top: -400px;
+		animation: drop1 0.6s ease forwards;
+		
+	}
+
+	.text-center{
+		top: -400px;
+		animation: drop1 0.6s ease forwards;
 	}
 
 	.form-signin .checkbox {
 	  font-weight: 400;
+	  
 	}
     .form-signin .form-floating:focus-within {
 	  z-index: 2;
@@ -83,15 +114,20 @@ border-color:red;
 	  margin-bottom: -1px;
 	  border-bottom-right-radius: 0;
 	  border-bottom-left-radius: 0;
+	  top: -400px;
+		animation: drop1 0.6s ease forwards;
 	}
 
 	.form-signin input[type="password"] {
 	  margin-bottom: 10px;
 	  border-top-left-radius: 0;
 	  border-top-right-radius: 0;
+	  top: -400px;
+		animation: drop1 0.6s ease forwards;
 	}
 	.form-floating{
 		margin: 10px;
+		
 	}
 	</style>
 </head>
@@ -135,6 +171,9 @@ border-color:red;
     <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit">Sign up</button>
     <span id="signini">Already have an account: </span><a  href="login.php">Sign in</a>
   </form>
+  <br>
+  <br>
+  <br>
 </main>
 
 </body>

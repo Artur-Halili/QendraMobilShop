@@ -31,14 +31,19 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%
 color:white;
     }
 
-
+   @keyframes drop1{
+		0%{opacity:0}
+		70%{transform: translateY(15px)}
+		100%{transform: translateY(10px); opacity:1; }
+	}
 
     .form-signin {
       width: 100%;
       max-width: 330px;
       padding: 15px;
       margin: auto;
-      
+      		top: -400px;
+		animation: drop1 0.6s ease forwards;
     }
     .form-signin .checkbox {
       font-weight: 400;
@@ -90,7 +95,7 @@ transition:ease 0.2s;
 .custom-hover:hover{
   transition: ease-in 0.2s;
 transform: scale(1.1);
-border-color:red;
+border-color:blue;
 }
 
 
