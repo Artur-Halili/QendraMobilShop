@@ -309,14 +309,14 @@ box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.155);
 #orders{
    background-color: #273036;
   color:white;
-  border-radius:20px;
+  border-radius:15px;
   text-align: center;
 }
 
 #dashb{   
 background-color: #273036;
   color:white;
-  border-radius:20px;
+  border-radius:15px;
   text-align: center;
 }
   </style>

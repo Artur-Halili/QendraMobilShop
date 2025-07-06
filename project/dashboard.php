@@ -286,7 +286,7 @@ transform: scale(1.0);
 #orders{
    background-color:#273036;
   color:white;
-  border-radius:20px;
+  border-radius:15px;
   text-align: center;
 }
 
@@ -313,7 +313,7 @@ transform: scale(1.1);
   color:black;
   background-color:#f9f6ee;
   text-align: center;
-  border-radius: 20px;
+  border-radius:15px;
  -webkit-box-shadow:0px 0px 5px 5px rgba(209, 214, 215, 0.155);
 -moz-box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.155);
 box-shadow: 0px 0px 5px 5px rgba(209, 214, 215, 0.155);

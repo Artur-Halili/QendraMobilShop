@@ -33,8 +33,8 @@ color:white;
 
    @keyframes drop1{
 		0%{opacity:0}
-		70%{transform: translateY(15px)}
-		100%{transform: translateY(10px); opacity:1; }
+		70%{transform: translateY(35px)}
+		100%{transform: translateY(15px); opacity:1; }
 	}
 
     .form-signin {
@@ -82,20 +82,26 @@ a{
 }
 
 #signini{
-  background: #000000;
-background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
-color:yellow;
+  background-color: #273036;
+color:white;
 transition:ease 0.2s;
+border-color:white;
+border-radius:15px;
 }
 
-.custom-hover{
+#signini:hover{
+  background-color:white;
+  color:black;
   border-color:white;
+    -webkit-box-shadow:0px 0px 5px 5px  rgba(94, 101, 99, 0.84);
+-moz-box-shadow: 0px 0px 5px 5px rgba(94, 101, 99, 0.84);
+box-shadow: 0px 0px 5px 5px rgba(94, 101, 99, 0.84);
 }
 
 .custom-hover:hover{
-  transition: ease-in 0.2s;
+  transition: ease-in 0.3s;
 transform: scale(1.1);
-border-color:blue;
+
 }
 
 

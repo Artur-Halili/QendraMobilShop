@@ -66,10 +66,10 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%
 	}
 
 	.btn-primary{
-		background: #000000;
-background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(56, 56, 56, 1) 100%, rgba(237, 221, 83, 1) 55%);
-border-color:white;
-color:yellow;
+		 background-color: #273036;
+color:white;
+		border-color:white;
+		border-radius:15px;
 transition:ease 0.2s;
 top: -400px;
 		animation: drop 0.6s ease forwards;
@@ -78,8 +78,12 @@ top: -400px;
 	.btn-primary:hover{
 		  transition: ease-in 0.2s;
 transform: scale(1.1);
-color:yellow;
-border-color:red;
+ background-color:white;
+  color:black;
+  border-color:white;
+  -webkit-box-shadow:0px 0px 5px 5px  rgba(94, 101, 99, 0.84);
+-moz-box-shadow: 0px 0px 5px 5px rgba(94, 101, 99, 0.84);
+box-shadow: 0px 0px 5px 5px rgba(94, 101, 99, 0.84);
 	}
 
 	.form-signin {
