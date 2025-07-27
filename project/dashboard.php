@@ -135,7 +135,7 @@ $users_data=$selectUsers->fetchall();
 
         <tr>
                 <td><?php echo $user_data['id']; ?></td>
-                <td><?php echo $user_data['name']; ?></td>
+                <td><?php echo $user_data['Name']; ?></td>
                 <td><?php echo $user_data['username']; ?></td>
                 <td><?php echo $user_data['email']; ?></td>
                 <!-- If we want to update a user we need to link into editUsers.php -->
