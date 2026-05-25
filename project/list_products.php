@@ -134,8 +134,7 @@ $users_data=$selectUsers->fetchAll();
             </tr>
           </thead>
           <tbody>
-            <img id="logos" src="images/logos.png">
-<p id="adresa">Ulpian te Rrethi me Flamur</p>
+           
             <?php foreach ($users_data as $user_data) { ?>
                 <tr>
                 <td><?php echo $user_data['id']; ?></td>

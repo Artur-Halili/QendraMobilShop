@@ -5,7 +5,7 @@ include_once('config.php');
 if(isset($_POST['submit'])){
 
     $qms=$_POST['Name'];
-    $qms=$_POST['Description'];
+    $qms=$_POST['Desc'];
     $qms=$_POST['Price'];
     $qms=$_POST['image'];
 
